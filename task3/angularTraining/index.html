@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="/node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="/node_modules/angular-route/angular-route.js"></script>
+
+    <script type="text/javascript" src="main.js"></script>
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+  <body ng-controller="myCtrl">
+    <nav class="navbar navbar-inverse">
+ <div class="container-fluid">
+   <div class="navbar-header">
+     <a class="navbar-brand" href="#/">Angular</a>
+   </div>
+   <ul class="nav navbar-nav">
+     <li class="active"><a href="#/">Home</a></li>
+     <li class="active"><a href="#/" ng-show="$scope.showInfo();">Your info</a></li>
+     <li class="active"><a href="#/" ng-show="showChange()">Change info</a></li>
+   </ul>
+   <ul class="nav navbar-nav navbar-right">
+     <li><a href="#/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+   </ul>
+ </div>
+</nav>
+<div ng-view></div>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<div ng-controller="dashboardCtrl" >
+  <div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>{{user}}</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Username</td>
+        <td>{{user}}</td>
+        <td><input type="text" ng-model="newName"></td>
+        <td><button ng-click="changeName()" >change</button></td>
+      </tr>
+      <tr>
+        <td>Password</td>
+        <td>{{password}}</td>
+        <td><input type="text" ng-model="newPassword"></td>
+        <td><button ng-click="changePassword()">change</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
