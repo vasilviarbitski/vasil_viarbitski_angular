@@ -1,0 +1,28 @@
+<div>
+  <p>
+<input class="form-control" type="text" name="name" value="" ng-model="search.$" placeholder="search"/>
+</p>
+<table class="table table-striped">
+   <thead>
+      <tr>
+        <th>Name <span class="glyphicon glyphicon-sort-by-alphabet" aria-hidden="true" ng-click="orderName()"></span></th>
+        <th>Age <span class="glyphicon glyphicon-sort-by-order" aria-hidden="true" ng-click="orderAge()"></span></th>
+        <th>City <span class="glyphicon glyphicon-sort-by-alphabet" aria-hidden="true" ng-click="orderCity()"></span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="animate-repeat" ng-repeat="user in users | orderBy: order| filter: search">
+<td >
+    {{user.name}}
+</td>
+<td >
+    {{user.age}}
+</td>
+<td >
+    {{user.city}}
+</td>
+</tr>
+</tbody>
+</div>
+</table>
+</div>
